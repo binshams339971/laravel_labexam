@@ -22,9 +22,11 @@
 			<td>Category</td>
 			<td>
 				<select name="category">
-					<option value="ram">Ram</option>
-					<option value="harddisk">Hard Disk</option>
-					<option value="processor">Processor</option>
+					<option value="Ram">Ram</option>
+					<option value="Harddisk">Hard Disk</option>
+					<option value="Processor">Processor</option>
+					<option value="Casing">Casing</option>
+					<option value="Graphics Card">Graphics Card</option>
 				</sselct>
 			</td>
 		</tr>

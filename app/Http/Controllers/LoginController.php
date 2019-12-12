@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Admin;
+use App\Product;
 
 class LoginController extends Controller
 {
@@ -23,7 +24,8 @@ class LoginController extends Controller
 						->get();
 			if(count($users) > 0){
 				$request->session()->put('username', $request->username);
-				return redirect()->route('home.index');
+				$stds = Product::all();
+            	return view('userhome.index')->with('users', $stds);
 			}else{
 				$request->session()->flash('msg', 'invalid username/password');
 				return redirect()->route('login.index');

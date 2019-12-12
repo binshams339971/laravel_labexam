@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Student Edit</title>
+	<title>Edit</title>
 </head>
 <body>
 	<h1>Edit Student</h1>
 
-	<a href="{{route('home.productlist')}}">Back</a> |
+	<a href="{{route('adminhome.productlist')}}">Back</a> |
 	<a href="{{route('logout.index')}}">logout</a>
 
 <br><br>
@@ -19,8 +19,16 @@
 			<td><input type="text" name="name" value="{{$user['name']}}"></td>
 		</tr>
 		<tr>
-			<td>Quantity</td>
-			<td><input type="text" name="quantity" value="{{$user['quantity']}}"></td>
+			<td>Category</td>
+			<td>
+				<select name="category">
+					<option value="Ram">Ram</option>
+					<option value="Harddisk">Hard Disk</option>
+					<option value="Processor">Processor</option>
+					<option value="Casing">Casing</option>
+					<option value="Graphics Card">Graphics Card</option>
+				</sselct>
+			</td>
 		</tr>
 		<tr>
 			<td>Price</td>

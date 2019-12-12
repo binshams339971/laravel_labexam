@@ -47,7 +47,5 @@
 	@endforeach
 
 	</table>
-
-	<div id="searchResult"></div>
 </body>
 </html>

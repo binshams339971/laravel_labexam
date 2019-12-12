@@ -28,25 +28,23 @@ Route::post('/adminregistration', 'RegistrationController@registeradmin');
 
 Route::get('/logout', 'LogoutController@index')->name('logout.index');
 
-Route::get('/adminhome', 'HomeController@adminindex')->name('adminhome.index');
-Route::get('/adduser', 'HomeController@adduser')->name('adminhome.adduser');
-Route::post('/adduser', 'HomeController@storeuser');
+Route::get('/adminhome', 'AdminController@adminindex')->name('adminhome.index');
+Route::get('/adduser', 'AdminController@adduser')->name('adminhome.adduser');
+Route::post('/adduser', 'AdminController@storeuser');
 
-Route::get('/userlist', 'HomeController@userlist')->name('adminhome.userlist');
+Route::get('/userlist', 'AdminController@userlist')->name('adminhome.userlist');
 
-Route::get('/edituser/{id}', 'HomeController@edit')->name('adminhome.edituser');
-Route::post('/edituser/{id}', 'HomeController@update');
-Route::get('/deleteuser/{id}', 'HomeController@deleteuser')->name('adminhome.deleteuser');
-
-
-Route::get('/addproduct', 'HomeController@addproduct')->name('adminhome.addproduct');
-Route::post('/addproduct', 'HomeController@storeproduct');
-Route::get('/productlist', 'HomeController@productlist')->name('adminhome.productlist');
-Route::get('/adminhome/edit/{id}', 'HomeController@editproduct')->name('adminhome.editproduct');
-Route::post('/adminhome/edit/{id}', 'HomeController@updateproduct');
-Route::get('/adminhome/delete/{id}', 'HomeController@deleteproduct')->name('adminhome.deleteproduct');
-
-Route::get('/search', 'HomeController@search1');
+Route::get('/edituser/{id}', 'AdminController@edit')->name('adminhome.edituser');
+Route::post('/edituser/{id}', 'AdminController@update');
+Route::get('/deleteuser/{id}', 'AdminController@deleteuser')->name('adminhome.deleteuser');
 
 
-Route::get('/home', 'HomeController@index')->name('home.index');
+Route::get('/addproduct', 'AdminController@addproduct')->name('adminhome.addproduct');
+Route::post('/addproduct', 'AdminController@storeproduct');
+Route::get('/productlist', 'AdminController@productlist')->name('adminhome.productlist');
+Route::get('/adminhome/edit/{id}', 'AdminController@editproduct')->name('adminhome.editproduct');
+Route::post('/adminhome/edit/{id}', 'AdminController@updateproduct');
+Route::get('/adminhome/delete/{id}', 'AdminController@deleteproduct')->name('adminhome.deleteproduct');
+
+
+Route::get('/home', 'UserController@index')->name('userhome.index');

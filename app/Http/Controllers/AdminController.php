@@ -1,24 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use App\User;
 use App\Admin;
 use App\Product;
 
-class HomeController extends Controller
+class AdminController extends Controller
 {
-    function index(Request $request){
-	   if($request->session()->has('username')){
-				return view('userhome.index');
-	   }
-	   else{
-		   return redirect('/login');
-	   }
-	}
-
-
-	/*function adminindex(Request $request){
+   function adminindex(Request $request){
 	   if($request->session()->has('username')){
 				return view('adminhome.index');
 	   }
@@ -70,6 +61,12 @@ class HomeController extends Controller
 
 
     function update(Request $request, $id){
+    	$request->validate([
+			'name'=>'required',
+			'phone'=>'required',
+            'username'=>'required',
+            'password'=>'required'
+        ]);
 
         $user = User::find($id);
         $user->name = $request->name;
@@ -118,6 +115,11 @@ class HomeController extends Controller
 	}
 
 	 function updateproduct(Request $request, $id){
+	 	$request->validate([
+			'name'=>'required',
+			'category'=>'required',
+            'price'=>'required'
+        ]);
 
         $product = Product::find($id);
         $product->name = $request->name;
@@ -137,6 +139,5 @@ class HomeController extends Controller
     	$user = User::find($id);
     	$user->delete();
     	return redirect()->route('adminhome.userlist');
-    }*/
-	
+    }
 }
