@@ -64,4 +64,10 @@ class UserController extends Controller
 		$ord->save();
 		return redirect()->route('userhome.index');
 	}
+
+	function cart($id){
+		$array_product = array(); 
+		array_push($array_product, $id);
+		return redirect()->route('userhome.index');
+	}
 }

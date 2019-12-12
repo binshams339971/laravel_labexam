@@ -55,5 +55,6 @@ Route::get('/processor', 'UserController@processorindex')->name('userhome.proces
 Route::get('/graphicscard', 'UserController@gcardindex')->name('userhome.gcard');
 Route::get('/buy/{id}', 'UserController@buyindex')->name('userhome.buy');
 Route::post('/buy/{id}', 'UserController@buy');
+Route::get('/cart/{id}', 'UserController@cart')->name('cart');
 
 

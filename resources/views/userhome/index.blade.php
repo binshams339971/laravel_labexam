@@ -32,7 +32,7 @@
 			<td>{{ $std->category }}</td>
 			<td>{{ $std->price }}</td>
 			<td>
-				<a href=""> Add to Cart </a> | 
+				<a href="{{ route('cart', $std->id)}}"> Add to Cart </a> | 
 				<a href="{{ route('userhome.buy', $std->id) }}"> Buy Now </a> 
 			</td>
 		</tr>
