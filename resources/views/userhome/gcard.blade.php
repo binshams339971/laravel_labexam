@@ -20,8 +20,8 @@
 	<table border="1">
 		<tr>
 			<td>Name</td>
-			<td>Category</td>
 			<td>Price</td>
+			<td>Review</td>
 			<td>Action</td>
 		</tr>
 
@@ -29,11 +29,11 @@
 	@foreach($users as $std)
 		<tr>
 			<td>{{ $std->name }}</td>
-			<td>{{ $std->category }}</td>
 			<td>{{ $std->price }}</td>
+			<td>{{ $std->category }}</td>
 			<td>
 				<a href="{{ route('adminhome.editproduct', $std->id) }}"> Add to Cart </a> | 
-				<a href="{{ route('adminhome.deleteproduct', $std->id) }}"> Buy Now </a> 
+				<a href="{{ route('adminhome.buy', $std->id) }}"> Buy Now </a> 
 			</td>
 		</tr>
 	@endforeach

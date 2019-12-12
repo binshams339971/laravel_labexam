@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Admin;
 use App\Product;
+use App\order;
 
 class UserController extends Controller
 {
@@ -49,5 +50,18 @@ class UserController extends Controller
 		$stds = Product::where('category', 'gcard')
 						->get();
         return view('userhome.gcard')->with('users', $stds);
+	}
+	function buyindex($id){
+		$product = Product::find($id);
+		return view('userhome.buy')->with('user', $product);
+	}
+	function buy(Request $request){
+		$ord = new order();
+		$ord->name = $request->name;
+		$ord->category = $request->category;
+		$ord->price = $request->price;
+		$ord->username = session('username');
+		$ord->save();
+		return redirect()->route('userhome.index');
 	}
 }

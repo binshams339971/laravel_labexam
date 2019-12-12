@@ -20,6 +20,7 @@
 		<tr>
 			<td>Name</td>
 			<td>Price</td>
+			<td>Review</td>
 			<td>Action</td>
 		</tr>
 
@@ -28,6 +29,7 @@
 		<tr>
 			<td>{{ $std->name }}</td>
 			<td>{{ $std->price }}</td>
+			<td>{{ $std->category }}</td>
 			<td>
 				<a href="{{ route('adminhome.editproduct', $std->id) }}"> Add to Cart </a> | 
 				<a href="{{ route('adminhome.deleteproduct', $std->id) }}"> Buy Now </a> 

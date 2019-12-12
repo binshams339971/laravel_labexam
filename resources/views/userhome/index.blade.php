@@ -32,8 +32,8 @@
 			<td>{{ $std->category }}</td>
 			<td>{{ $std->price }}</td>
 			<td>
-				<a href="{{ route('adminhome.editproduct', $std->id) }}"> Add to Cart </a> | 
-				<a href="{{ route('adminhome.deleteproduct', $std->id) }}"> Buy Now </a> 
+				<a href=""> Add to Cart </a> | 
+				<a href="{{ route('userhome.buy', $std->id) }}"> Buy Now </a> 
 			</td>
 		</tr>
 	@endforeach

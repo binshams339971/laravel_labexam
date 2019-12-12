@@ -53,3 +53,7 @@ Route::get('/storage', 'UserController@storageindex')->name('userhome.storage');
 Route::get('/casing', 'UserController@casingindex')->name('userhome.casing');
 Route::get('/processor', 'UserController@processorindex')->name('userhome.processor');
 Route::get('/graphicscard', 'UserController@gcardindex')->name('userhome.gcard');
+Route::get('/buy/{id}', 'UserController@buyindex')->name('userhome.buy');
+Route::post('/buy/{id}', 'UserController@buy');
+
+
