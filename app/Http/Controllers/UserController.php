@@ -70,4 +70,13 @@ class UserController extends Controller
 		array_push($array_product, $id);
 		return redirect()->route('userhome.index');
 	}
+
+	function search(Request $request){
+		$search = $request->search;
+		$product = Product::where('name', $search)
+							->orWhere('category', $search)
+							->orWhere('price', $search)
+							->get();
+		return view('userhome.search')->with('users', $product);
+	}
 }

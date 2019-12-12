@@ -13,9 +13,10 @@
 	<a href="{{ route('userhome.casing')}}">Casing</a> |
 	<a href="{{ route('userhome.gcard')}}">Graphics Card</a> |
 	<a href="{{ route('logout.index')}}">logout</a>
-	<br><br>
-		<h1>All Avilable Products</h1>
+	<br><br><br>
+		<input type="text" name="search" placeholder="Search here.."> <a href="{{ route('userhome.search')}}">Search</a>  
 	<br>
+		<h1>All Avilable Products</h1>
 
 	<table border="1">
 		<tr>

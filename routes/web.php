@@ -48,6 +48,8 @@ Route::get('/adminhome/delete/{id}', 'AdminController@deleteproduct')->name('adm
 
 
 Route::get('/home', 'UserController@index')->name('userhome.index');
+Route::get('/search', 'UserController@search')->name('userhome.search');
+
 Route::get('/ram', 'UserController@ramindex')->name('userhome.ram');
 Route::get('/storage', 'UserController@storageindex')->name('userhome.storage');
 Route::get('/casing', 'UserController@casingindex')->name('userhome.casing');

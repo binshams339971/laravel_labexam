@@ -4,8 +4,7 @@
 	<title>login page</title>
 </head>
 <body>
-	<h1>Welcome! {{ session('username') }}</h1>
-
+	
 	<br>
 	<a href="{{ route('userhome.index')}}">Home</a> |
 	<a href="{{ route('userhome.storage')}}">Storage</a> |
@@ -31,8 +30,8 @@
 			<td>{{ $std->price }}</td>
 			<td>{{ $std->category }}</td>
 			<td>
-				<a href="{{ route('adminhome.editproduct', $std->id) }}"> Add to Cart </a> | 
-				<a href="{{ route('adminhome.deleteproduct', $std->id) }}"> Buy Now </a> 
+				<a href="{{ route('cart', $std->id)}}"> Add to Cart </a> | 
+				<a href="{{ route('userhome.buy', $std->id) }}"> Buy Now </a>
 			</td>
 		</tr>
 	@endforeach

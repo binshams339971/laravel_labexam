@@ -4,9 +4,9 @@
 	<title>Edit</title>
 </head>
 <body>
-	<h1>Edit Student</h1>
+	<h1>Buy</h1>
 
-	<a href="{{route('adminhome.productlist')}}">Back</a> |
+	<a href="{{route('userhome.index')}}">Back</a> |
 	<a href="{{route('logout.index')}}">logout</a>
 
 <br><br>
@@ -16,15 +16,15 @@
 	<table border="0">
 		<tr>
 			<td>Name</td>
-			<td><input type="text" name="name" value="{{$user['name']}}"></td>
+			<td><input type="text" name="name" value="{{$user['name']}}" readonly></td>
 		</tr>
 		<tr>
 			<td>Category</td>
-			<td><input type="text" name="category" value="{{$user['category']}}"></td>
+			<td><input type="text" name="category" value="{{$user['category']}}" readonly></td>
 		</tr>
 		<tr>
 			<td>Price</td>
-			<td><input type="text" name="price" value="{{$user['price']}}"></td>
+			<td><input type="text" name="price" value="{{$user['price']}}" readonly></td>
 		</tr>
 		<tr>
 			<td></td>
