@@ -7,20 +7,18 @@
 	<h1>Welcome! {{ session('username') }}</h1>
 
 	<br>
-	<a href="">Processor</a> |
-	<a href="">Ram</a> |
-	<a href="">Storage</a> |
-	<a href="">Casing</a> |
-	<a href="">Graphics Card</a> |
+	<a href="{{ route('userhome.index')}}">Home</a> |
+	<a href="{{ route('userhome.storage')}}">Storage</a> |
+	<a href="{{ route('userhome.casing')}}">Casing</a> |
+	<a href="{{ route('userhome.gcard')}}">Graphics Card</a> |
 	<a href="{{ route('logout.index')}}">logout</a>
 	<br><br>
-		<h1>All Avilable Products</h1>
+		<h1>All Avilable Ram</h1>
 	<br>
 
 	<table border="1">
 		<tr>
 			<td>Name</td>
-			<td>Category</td>
 			<td>Price</td>
 			<td>Action</td>
 		</tr>
@@ -29,7 +27,6 @@
 	@foreach($users as $std)
 		<tr>
 			<td>{{ $std->name }}</td>
-			<td>{{ $std->category }}</td>
 			<td>{{ $std->price }}</td>
 			<td>
 				<a href="{{ route('adminhome.editproduct', $std->id) }}"> Add to Cart </a> | 

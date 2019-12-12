@@ -11,10 +11,43 @@ class UserController extends Controller
 {
     function index(Request $request){
 	   if($request->session()->has('username')){
-				return view('userhome.index');
+	   		$stds = Product::all();
+            return view('userhome.index')->with('users', $stds);
 	   }
 	   else{
 		   return redirect('/login');
 	   }
+	}
+
+	function ramindex(){
+		$stds = Product::where('category', 'ram')
+						->get();
+		//print_r($stds);
+        return view('userhome.ram')->with('users', $stds);
+	}
+
+	function storageindex(){
+		$stds = Product::where('category', 'harddisk')
+						->get();
+        return view('userhome.storage')->with('users', $stds);
+	}
+
+	function processorindex(){
+		$stds = Product::where('category', 'processor')
+						->get();
+		//print_r($stds);
+        return view('userhome.processor')->with('users', $stds);
+	}
+
+	function casingindex(){
+		$stds = Product::where('category', 'casing')
+						->get();
+        return view('userhome.casing')->with('users', $stds);
+	}
+
+	function gcardindex(){
+		$stds = Product::where('category', 'gcard')
+						->get();
+        return view('userhome.gcard')->with('users', $stds);
 	}
 }

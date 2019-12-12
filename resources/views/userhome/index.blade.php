@@ -7,11 +7,11 @@
 	<h1>Welcome! {{ session('username') }}</h1>
 
 	<br>
-	<a href="">Processor</a> |
-	<a href="">Ram</a> |
-	<a href="">Storage</a> |
-	<a href="">Casing</a> |
-	<a href="">Graphics Card</a> |
+	<a href="{{ route('userhome.processor')}}">Processor</a> |
+	<a href="{{ route('userhome.ram')}}">Ram</a> |
+	<a href="{{ route('userhome.storage')}}">Storage</a> |
+	<a href="{{ route('userhome.casing')}}">Casing</a> |
+	<a href="{{ route('userhome.gcard')}}">Graphics Card</a> |
 	<a href="{{ route('logout.index')}}">logout</a>
 	<br><br>
 		<h1>All Avilable Products</h1>
